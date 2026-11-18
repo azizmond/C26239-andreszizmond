@@ -11,6 +11,7 @@
         --background-secundario: #66705A;
         --background-terciario: #C5A46D;
         --background-botones: #A65D45;
+        --background-contador: #bd2f2f;
 
         /*Fuentes*/
         --color-primario: #292722;
@@ -245,6 +246,13 @@
         font-size: 1.25rem;
     }
 
+    .precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--background-secundario);
+    margin-top: auto;         /* empuja el precio al fondo de la card */
+    }
+
     .card button {
         background: var(--background-botones);
         color: var(--color-secundario);
@@ -399,4 +407,106 @@
         min-height: 340px;
         border: 0; 
         display: block;
+    }
+    
+    .contador {
+        background: var(--background-contador);
+        color: #fff;
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 50%;
+        padding: 3px 9px;
+        margin-left: 4px;
+    }
+
+    /* ============================================================
+        8) PAGINA FINALIZAR COMPRA
+        Dos columnas con flex: carrito a la izquierda, datos a la derecha.
+        ============================================================ */
+    .bloque-checkout {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        align-items: flex-start;
+    }
+
+    .resumen-carrito,
+    .formulario-compra {
+        flex: 1 1 320px;
+        background: white;
+        border: 1px solid #E0E0E0;
+        border-radius: 8px;
+        padding: 25px;
+    }
+
+    .resumen-carrito h3,
+    .formulario-compra h3 {
+        color: #1F6F66;
+        margin-bottom: 15px;
+    }
+
+    /* Cada fila del carrito: nombre | cantidad | precio | boton */
+    .item-carrito {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0;
+        border-bottom: 1px solid #EEE;
+    }
+
+    .item-nombre {
+        flex: 1;                  /* el nombre ocupa todo el espacio que sobra */
+    }
+
+    .item-precio {
+        font-weight: bold;
+    }
+
+    .item-carrito button {
+        background: none;
+        border: none;
+        color: #C94F4F;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .carrito-vacio a {
+        color: #2F8F83;
+    }
+
+    .total {
+        font-size: 22px;
+        font-weight: bold;
+        margin: 20px 0 15px;
+        color: #1F6F66;
+    }
+
+    .boton-secundario {
+        background: none;
+        border: 1px solid #C94F4F;
+        color: #C94F4F;
+        padding: 8px 16px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .formulario-compra label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .formulario-compra input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #CCC;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+
+    .formulario-compra .boton {
+        border: none;
+        cursor: pointer;
+        font-size: 15px;
     }
