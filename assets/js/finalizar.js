@@ -3,7 +3,8 @@ function mostrarCarrito() {
     const lista = document.getElementById("lista-carrito");
     const total = document.getElementById("total-carrito");
     if (carrito.length === 0) {
-        lista.innerHTML = `<p class="carrito-vacio">Tu carrito está vacío. <a href="index.html#productos">Ver productos</a></p>`;
+        lista.innerHTML = `<p class="carrito-vacio">Tu carrito está vacío. <a href="index.html#productos
+        ">Ver productos</a></p>`;
         total.textContent = formatearPrecio(0);
         return;
     }
@@ -58,7 +59,7 @@ function finalizarCompra() {
         title: "¡Gracias por tu compra, " + nombre + "!",
         text: "Total pagado: " + formatearPrecio(total),
         confirmButtonText: "Volver a la tienda",
-        confirmButtonColor: "#2F8F83"
+        confirmButtonColor: "#66705A"
     }).then(function () {
         // .then se ejecuta cuando el usuario cierra el cartel
         window.location.href = "index.html";
